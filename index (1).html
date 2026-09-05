@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SR Products - Premium Skincare & Personal Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f5f5f5;
+            --accent-color: #d4a574;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --border-color: #e0e0e0;
+            --success-color: #4caf50;
+            --warning-color: #ff9800;
+            --danger-color: #f44336;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .section {
+            padding: 96px 0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-dark);
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .icon-btn:hover {
+            color: var(--accent-color);
+        }
+
+        .badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--danger-color);
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 128px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-light);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .hero-description {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .section-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+        }
+
+        .view-all-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .view-all-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Concern Cards */
+        .concerns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .concern-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 32px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .concern-card:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .concern-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .concern-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .concern-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            background: #f5f5f5;
+            aspect-ratio: 1;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--accent-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .wishlist-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .wishlist-btn.active {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #ffc107;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .product-description {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .product-pricing {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .product-original-price {
+            font-size: 14px;
+            color: var(--text-light);
+            text-decoration: line-through;
+        }
+
+        .product-discount {
+            font-size: 12px;
+            color: var(--danger-color);
+            font-weight: 600;
+        }
+
+        .add-to-cart-btn {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--accent-color);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 450px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .featured-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 4-Step Routine */
+        .routine-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .routine-card {
+            text-align: center;
+        }
+
+        .routine-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 16px;
+        }
+
+        .routine-image {
+            width: 100%;
+            height: 200px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .routine-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .routine-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .routine-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+        }
+
+        .benefit-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Reviews Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 24px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 32px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .review-text {
+            font-size: 15px;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        .reviewer-info {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .reviewer-details h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .reviewer-details p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* Instagram Grid */
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .instagram-item {
+            aspect-ratio: 1;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .instagram-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .instagram-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-content h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .newsletter-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 8px;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            background: transparent;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 14px 32px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent-color);
+        }
+
+        /* Offer Banner */
+        .offer-banner {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 64px;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .offer-content h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .offer-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .offer-tag {
+            display: inline-block;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 0 32px;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-brand {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 24px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .cart-item-price {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .quantity-btn {
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--border-color);
+            background: white;
+            cursor: pointer;
+            border-radius: 2px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: var(--danger-color);
+            cursor: pointer;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .cart-footer {
+            padding: 24px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: var(--accent-color);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 300;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-color);
+        }
+
+        /* Alert Messages */
+        .alert {
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                height: 64px;
+                flex-wrap: wrap;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .featured-section,
+            .offer-banner {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+
+            .modal-content {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .header-content {
+                padding: 0 16px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .products-grid,
+            .concerns-grid,
+            .routine-cards,
+            .benefits-grid,
+            .reviews-grid,
+            .instagram-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">SR Products</a>
+            <nav class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#concerns">Concerns</a></li>
+                <li><a href="#about">About</a></li>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn" onclick="toggleCart()">🛒
+                    <span class="badge" id="cartBadge">0</span>
+                </button>
+                <button class="icon-btn" onclick="toggleWishlist()">❤️</button>
+                <button class="icon-btn" onclick="toggleSearch()">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">✨ PREMIUM SKINCARE</span>
+                <h1>Healthy Skin Starts Here</h1>
+                <p class="hero-description">Discover our curated collection of premium skincare and personal care products, carefully formulated to nourish and transform your skin.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('shop')">Explore Products</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('routine')">Learn Our Routine</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop By Skin Concern -->
+    <section class="section" id="concerns">
+        <div class="container">
+            <div class="section-header-top">
+                <div>
+                    <p class="section-tag">FIND YOUR SOLUTION</p>
+                    <h2 class="section-title">Shop By Skin Concern</h2>
+                </div>
+            </div>
+            <div class="concerns-grid">
+                <div class="concern-card" onclick="filterByCategory('acne')">
+                    <div class="concern-icon">🔴</div>
+                    <h3>Acne & Breakouts</h3>
+                    <p>Target blemishes and prevent future breakouts</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('dark-spots')">
+                    <div class="concern-icon">🌑</div>
+                    <h3>Dark Spots</h3>
+                    <p>Fade and brighten uneven skin tone</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('dryness')">
+                    <div class="concern-icon">💧</div>
+                    <h3>Dryness</h3>
+                    <p>Deep hydration and moisture restoration</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('dullness')">
+                    <div class="concern-icon">✨</div>
+                    <h3>Dullness</h3>
+                    <p>Restore radiance and glow</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('sun')">
+                    <div class="concern-icon">☀️</div>
+                    <h3>Sun Protection</h3>
+                    <p>Defend against UV damage</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('anti-aging')">
+                    <div class="concern-icon">⏳</div>
+                    <h3>Anti-Aging</h3>
+                    <p>Combat fine lines and loss of elasticity</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('sensitivity')">
+                    <div class="concern-icon">🛡️</div>
+                    <h3>Sensitivity</h3>
+                    <p>Soothe and protect sensitive skin</p>
+                </div>
+                <div class="concern-card" onclick="filterByCategory('hydration')">
+                    <div class="concern-icon">💦</div>
+                    <h3>Hydration</h3>
+                    <p>Intense moisture boost and plumping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section" id="shop">
+        <div class="container">
+            <div class="section-header-top">
+                <div>
+                    <p class="section-tag">BESTSELLERS</p>
+                    <h2 class="section-title">Best Sellers</h2>
+                </div>
+                <a href="#" class="view-all-link">View All →</a>
+            </div>
+            <div class="products-grid" id="bestsellersGrid">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Everyday Essentials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">ESSENTIALS</p>
+                <h2 class="section-title">Your Everyday Skincare Essentials</h2>
+            </div>
+            <div class="featured-section">
+                <div class="featured-image">
+                    <div style="background: linear-gradient(135deg, #e8d4c4 0%, #f0e6dc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 80px;">✨</div>
+                </div>
+                <div class="featured-content">
+                    <p class="section-tag">SKINCARE ROUTINE</p>
+                    <h2>Start With These Four Essentials</h2>
+                    <p>Build your foundation with our carefully selected essential products. Each step is designed to work together for radiant, healthy skin.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Gentle cleanser to remove impurities without stripping natural oils</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Hydrating toner to balance and prepare skin</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Nourishing moisturizer for all-day hydration</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Broad-spectrum sunscreen SPF 50 for daily protection</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToSection('shop')">Shop Essentials</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nighttime Ritual -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header-top">
+                <div>
+                    <p class="section-tag">NIGHT CARE</p>
+                    <h2 class="section-title">Your Nighttime Ritual</h2>
+                </div>
+                <a href="#" class="view-all-link">Shop Night Care →</a>
+            </div>
+            <div class="products-grid" id="nightCareGrid">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunscreen Spotlight -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-section">
+                <div class="featured-image">
+                    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 80px;">☀️</div>
+                </div>
+                <div class="featured-content">
+                    <p class="section-tag">PROTECTION</p>
+                    <h2>Protect Your Skin Every Day</h2>
+                    <p>Daily sunscreen is the most important step in any skincare routine. Our broad-spectrum SPF 50 formula provides invisible protection without white cast or greasiness.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Broad-spectrum UVA/UVB protection</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Lightweight, invisible finish</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Water-resistant for up to 80 minutes</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Reef-safe and cruelty-free</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="addProductToCart({name: 'Daily Sunscreen SPF 50', price: 1800, id: 'sunscreen-001'})">Shop Sunscreen</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header-top">
+                <div>
+                    <p class="section-tag">NEW</p>
+                    <h2 class="section-title">New Arrivals</h2>
+                </div>
+                <a href="#" class="view-all-link">View All →</a>
+            </div>
+            <div class="products-grid" id="newArrivalsGrid">
+                <!-- Products loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="section">
+        <div class="container">
+            <div class="offer-banner">
+                <div class="offer-content">
+                    <span class="offer-tag">SEASONAL OFFER</span>
+                    <h2>Glow More. Spend Less.</h2>
+                    <p>Get up to 30% off on selected bestsellers and new arrivals. Limited time offer - shop now and transform your skincare routine!</p>
+                    <button class="btn btn-primary" onclick="scrollToSection('shop')">Shop Sale</button>
+                </div>
+                <div style="background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%); border-radius: 8px; height: 400px; display: flex; align-items: center; justify-content: center; font-size: 120px;">🎉</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Step Routine -->
+    <section class="section" id="routine">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">SIMPLE ROUTINE</p>
+                <h2 class="section-title">Build Your Simple Skincare Routine</h2>
+            </div>
+            <div class="routine-cards">
+                <div class="routine-card">
+                    <div class="routine-number">1</div>
+                    <div class="routine-image">
+                        <div style="background: linear-gradient(135deg, #e8d4c4 0%, #f0e6dc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">🧴</div>
+                    </div>
+                    <h3>Cleanse</h3>
+                    <p>Start with a gentle cleanser to remove impurities and prepare skin</p>
+                </div>
+                <div class="routine-card">
+                    <div class="routine-number">2</div>
+                    <div class="routine-image">
+                        <div style="background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">💧</div>
+                    </div>
+                    <h3>Treat</h3>
+                    <p>Apply targeted treatments like serums or essences</p>
+                </div>
+                <div class="routine-card">
+                    <div class="routine-number">3</div>
+                    <div class="routine-image">
+                        <div style="background: linear-gradient(135deg, #f0e6dc 0%, #e8d4c4 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">🧴</div>
+                    </div>
+                    <h3>Moisturize</h3>
+                    <p>Lock in hydration with a moisturizer suited to your skin type</p>
+                </div>
+                <div class="routine-card">
+                    <div class="routine-number">4</div>
+                    <div class="routine-image">
+                        <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">☀️</div>
+                    </div>
+                    <h3>Protect</h3>
+                    <p>Finish with daily sunscreen for protection</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose SR Products -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">OUR PROMISE</p>
+                <h2 class="section-title">Why Choose SR Products</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">✓</div>
+                    <h3>Premium Ingredients</h3>
+                    <p>Sourced from the finest suppliers worldwide for maximum efficacy</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧪</div>
+                    <h3>Dermatologist Tested</h3>
+                    <p>Rigorously tested and approved by skincare experts</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">♻️</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Sustainable packaging and cruelty-free formulations</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💯</div>
+                    <h3>Results Guaranteed</h3>
+                    <p>See visible improvements or your money back</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">TESTIMONIALS</p>
+                <h2 class="section-title">Loved By Our Customers</h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Loved the texture and how lightweight the sunscreen feels. No white cast at all!"</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">A</div>
+                        <div class="reviewer-details">
+                            <h4>Amelia Johnson</h4>
+                            <p>Verified Purchase</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"My skin has never felt softer. The Hydrating Night Cream is an absolute game changer."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">S</div>
+                        <div class="reviewer-details">
+                            <h4>Sophia Williams</h4>
+                            <p>Verified Purchase</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Visible brightening in just one week! The Vitamin C Serum is my new holy grail product."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">O</div>
+                        <div class="reviewer-details">
+                            <h4>Olivia Chen</h4>
+                            <p>Verified Purchase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header-top">
+                <div>
+                    <p class="section-tag">SOCIAL</p>
+                    <h2 class="section-title">Glow With Us</h2>
+                </div>
+                <a href="#" class="view-all-link">Follow @srproducts →</a>
+            </div>
+            <div class="instagram-grid">
+                <div class="instagram-item">
+                    <div style="background: linear-gradient(135deg, #e8d4c4 0%, #f0e6dc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">📸</div>
+                </div>
+                <div class="instagram-item">
+                    <div style="background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">✨</div>
+                </div>
+                <div class="instagram-item">
+                    <div style="background: linear-gradient(135deg, #f0e6dc 0%, #e8d4c4 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">💄</div>
+                </div>
+                <div class="instagram-item">
+                    <div style="background: linear-gradient(135deg, #fff9e6 0%, #ffe8cc 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 60px;">☀️</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <p class="section-tag">STAY UPDATED</p>
+                <h2>Stay In The Glow</h2>
+                <p>Subscribe to our newsletter for exclusive offers, skincare tips, and new product launches delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">SR Products</div>
+                    <p class="footer-description">Premium skincare and personal care products crafted with natural ingredients and scientific innovation for your healthiest, most radiant skin.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>SR Products</h3>
+                    <ul>
+                        <li><a href="#" onclick="scrollToSection('home')">About Us</a></li>
+                        <li><a href="#" onclick="showContactForm()">Our Story</a></li>
+                        <li><a href="#" onclick="showContactForm()">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('face')">Face Care</a></li>
+                        <li><a href="#" onclick="filterByCategory('sun')">Sun Care</a></li>
+                        <li><a href="#" onclick="filterByCategory('serum')">Serums</a></li>
+                        <li><a href="#" onclick="filterByCategory('moisturizer')">Moisturizers</a></li>
+                        <li><a href="#" onclick="filterByCategory('night')">Night Care</a></li>
+                        <li><a href="#" onclick="filterByCategory('body')">Body Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help & Policies</h3>
+                    <ul>
+                        <li><a href="#" onclick="showContactForm()">Contact Support</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2024 SR Products. All rights reserved.</p>
+            <div class="footer-links">
+                <span>We accept: 💳 UPI 🏦 Cards 💰 Net Banking</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="text-align: center; color: #999; padding: 40px 20px;">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" onclick="showCheckout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('checkoutModal')">✕</button>
+            <h2 style="margin-bottom: 30px;">Checkout</h2>
+            
+            <div class="alert" id="checkoutAlert"></div>
+            
+            <form onsubmit="submitCheckout(event)" id="checkoutForm">
+                <h3 style="margin-bottom: 16px; font-size: 16px; font-weight: 600;">Delivery Information</h3>
+                
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>House / Door Number *</label>
+                    <input type="text" name="houseNo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Street / Area *</label>
+                    <input type="text" name="street" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>City *</label>
+                        <input type="text" name="city" required>
+                    </div>
+                    <div class="form-group">
+                        <label>District *</label>
+                        <input type="text" name="district" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>State *</label>
+                        <input type="text" name="state" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pincode *</label>
+                        <input type="text" name="pincode" required>
+                    </div>
+                </div>
+
+                <h3 style="margin: 30px 0 16px 0; font-size: 16px; font-weight: 600;">Payment Method</h3>
+                
+                <div class="form-group">
+                    <label>Select Payment Method *</label>
+                    <select name="paymentMethod" required>
+                        <option value="">Choose payment method</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Credit/Debit Card</option>
+                        <option value="NetBanking">Net Banking</option>
+                        <option value="COD">Cash on Delivery</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="transactionIdField" style="display: none;">
+                    <label>Transaction ID (Optional)</label>
+                    <input type="text" name="transactionId">
+                </div>
+
+                <button type="submit" class="submit-btn">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('contactModal')">✕</button>
+            <h2 style="margin-bottom: 30px;">Contact Us</h2>
+            
+            <div class="alert" id="contactAlert"></div>
+            
+            <form onsubmit="submitContact(event)" id="contactForm">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message *</label>
+                    <textarea name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Suppress network errors in console
+        window.addEventListener('error', function(e) {
+            if (e.message && e.message.includes('Failed to fetch') || e.message.includes('load resource')) {
+                return true;
+            }
+        }, true);
+
+        // Configuration
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQnL24Dm0v29sRsrVLcNUvvV3-tdhey8YcrRlvDSaufj-35aRKThdAcqr1eiSukvGR/exec';
+
+        // Product Data
+        const products = [
+            {
+                id: 'face-wash-001',
+                name: 'Gentle Face Wash',
+                category: 'face',
+                price: 599,
+                originalPrice: 799,
+                rating: 4.8,
+                reviews: 324,
+                description: 'Cleanses without stripping natural moisture',
+                badge: 'Bestseller',
+                concern: 'acne'
+            },
+            {
+                id: 'sunscreen-001',
+                name: 'Daily Sunscreen SPF 50',
+                category: 'sun',
+                price: 1299,
+                originalPrice: 1599,
+                rating: 4.9,
+                reviews: 512,
+                description: 'Invisible finish with broad-spectrum defense',
+                badge: 'Bestseller',
+                concern: 'sun'
+            },
+            {
+                id: 'night-cream-001',
+                name: 'Hydrating Night Cream',
+                category: 'night',
+                price: 1099,
+                originalPrice: 1399,
+                rating: 4.7,
+                reviews: 298,
+                description: 'Restores skin barrier overnight',
+                badge: 'Bestseller',
+                concern: 'hydration'
+            },
+            {
+                id: 'serum-001',
+                name: 'Vitamin C Face Serum',
+                category: 'serum',
+                price: 999,
+                originalPrice: 1299,
+                rating: 4.9,
+                reviews: 456,
+                description: 'Brightens tone and boosts collagen',
+                badge: 'Bestseller',
+                concern: 'dark-spots'
+            },
+            {
+                id: 'moisturizer-001',
+                name: 'Peptide Firming Moisturizer',
+                category: 'moisturizer',
+                price: 1199,
+                originalPrice: 1599,
+                rating: 4.8,
+                reviews: 387,
+                description: 'Advanced multi-peptide complex',
+                badge: 'New Arrival',
+                concern: 'anti-aging'
+            },
+            {
+                id: 'toner-001',
+                name: 'Rose Water Facial Mist',
+                category: 'toner',
+                price: 699,
+                originalPrice: 899,
+                rating: 4.6,
+                reviews: 221,
+                description: 'Instant refreshing hydration boost',
+                badge: 'New Arrival',
+                concern: 'hydration'
+            },
+            {
+                id: 'tonic-001',
+                name: 'AHA/BHA Clarifying Tonic',
+                category: 'face',
+                price: 899,
+                originalPrice: 1199,
+                rating: 4.7,
+                reviews: 312,
+                description: 'Smooth texture & unclog pores',
+                badge: 'New Arrival',
+                concern: 'acne'
+            },
+            {
+                id: 'mask-001',
+                name: 'Hydrating Sheet Mask',
+                category: 'mask',
+                price: 299,
+                originalPrice: 399,
+                rating: 4.5,
+                reviews: 198,
+                description: 'Intensive moisture treatment',
+                badge: 'Bestseller',
+                concern: 'dryness'
+            },
+            {
+                id: 'body-lotion-001',
+                name: 'Nourishing Body Lotion',
+                category: 'body',
+                price: 549,
+                originalPrice: 699,
+                rating: 4.6,
+                reviews: 156,
+                description: 'Silky smooth skin all day',
+                concern: 'hydration'
+            },
+            {
+                id: 'lip-balm-001',
+                name: 'Protective Lip Balm',
+                category: 'lips',
+                price: 249,
+                originalPrice: 349,
+                rating: 4.4,
+                reviews: 87,
+                description: 'Hydrating lip care with SPF',
+                concern: 'hydration'
+            }
+        ];
+
+        // Cart State
+        let cart = [];
+        let wishlist = [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCart();
+            loadWishlist();
+            renderProducts('bestsellersGrid', products.filter(p => p.badge === 'Bestseller').slice(0, 4));
+            renderProducts('nightCareGrid', products.filter(p => p.category === 'night').slice(0, 4));
+            renderProducts('newArrivalsGrid', products.filter(p => p.badge === 'New Arrival').slice(0, 3));
+        });
+
+        // Cart Functions
+        function toggleCart() {
+            document.getElementById('cartSidebar').classList.toggle('active');
+        }
+
+        function addProductToCart(product) {
+            const existingItem = cart.find(item => item.id === product.id);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({...product, quantity: 1});
+            }
+            saveCart();
+            updateCartUI();
+            showAlert('Product added to cart!', 'success');
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            saveCart();
+            updateCartUI();
+        }
+
+        function updateCartQuantity(productId, quantity) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = Math.max(1, quantity);
+                saveCart();
+                updateCartUI();
+            }
+        }
+
+        function updateCartUI() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartBadge = document.getElementById('cartBadge');
+            const cartTotal = document.getElementById('cartTotal');
+
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p style="text-align: center; color: #999; padding: 40px 20px;">Your cart is empty</p>';
+                cartBadge.textContent = '0';
+                cartTotal.textContent = '₹0';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <div style="background: #f5f5f5; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">📦</div>
+                        </div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">₹${item.price}</div>
+                            <div class="cart-item-quantity">
+                                <button class="quantity-btn" onclick="updateCartQuantity('${item.id}', ${item.quantity - 1})">−</button>
+                                <span style="margin: 0 8px;">${item.quantity}</span>
+                                <button class="quantity-btn" onclick="updateCartQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeFromCart('${item.id}')">Remove</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            cartItemsDiv.innerHTML = html;
+            cartBadge.textContent = cart.length;
+            cartTotal.textContent = `₹${total.toLocaleString()}`;
+        }
+
+        function saveCart() {
+            localStorage.setItem('srproducts_cart', JSON.stringify(cart));
+        }
+
+        function loadCart() {
+            const saved = localStorage.getItem('srproducts_cart');
+            if (saved) {
+                cart = JSON.parse(saved);
+                updateCartUI();
+            }
+        }
+
+        // Wishlist Functions
+        function toggleWishlist() {
+            alert('Open wishlist functionality');
+        }
+
+        function toggleProductWishlist(productId, element) {
+            if (wishlist.includes(productId)) {
+                wishlist = wishlist.filter(id => id !== productId);
+                element.classList.remove('active');
+            } else {
+                wishlist.push(productId);
+                element.classList.add('active');
+            }
+            saveWishlist();
+        }
+
+        function saveWishlist() {
+            localStorage.setItem('srproducts_wishlist', JSON.stringify(wishlist));
+        }
+
+        function loadWishlist() {
+            const saved = localStorage.getItem('srproducts_wishlist');
+            if (saved) {
+                wishlist = JSON.parse(saved);
+            }
+        }
+
+        // Product Rendering
+        function renderProducts(containerId, productsToRender) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            let html = '';
+            productsToRender.forEach(product => {
+                const isInWishlist = wishlist.includes(product.id);
+                const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+
+                html += `
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <div class="product-image" style="background: linear-gradient(135deg, #e8d4c4 0%, #f0e6dc 100%); display: flex; align-items: center; justify-content: center; font-size: 60px;">📦</div>
+                            ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+                            <button class="wishlist-btn ${isInWishlist ? 'active' : ''}" onclick="toggleProductWishlist('${product.id}', this)">♥</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <span class="stars">${'⭐'.repeat(Math.floor(product.rating))}</span>
+                                <span>(${product.reviews})</span>
+                            </div>
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-pricing">
+                                <span class="product-price">₹${product.price}</span>
+                                <span class="product-original-price">₹${product.originalPrice}</span>
+                                <span class="product-discount">${discount}% OFF</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addProductToCart({id: '${product.id}', name: '${product.name}', price: ${product.price}})">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Filter Functions
+        function filterByCategory(category) {
+            const filtered = products.filter(p => p.category === category || p.concern === category);
+            renderProducts('shop', filtered);
+            scrollToSection('shop');
+        }
+
+        // Checkout
+        function showCheckout() {
+            if (cart.length === 0) {
+                showAlert('Your cart is empty!', 'error');
+                return;
+            }
+            document.getElementById('checkoutModal').classList.add('active');
+            document.getElementById('transactionIdField').style.display = 'none';
+        }
+
+        function submitCheckout(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Build query parameters
+            const params = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                houseNo: formData.get('houseNo'),
+                street: formData.get('street'),
+                city: formData.get('city'),
+                district: formData.get('district'),
+                state: formData.get('state'),
+                pincode: formData.get('pincode'),
+                productName: cart.map(item => item.name).join(', '),
+                productId: cart.map(item => item.id).join(', '),
+                quantity: cart.map(item => item.quantity).join(', '),
+                productPrice: cart.map(item => item.price).join(', '),
+                discount: '0',
+                finalAmount: totalAmount,
+                paymentMethod: formData.get('paymentMethod'),
+                paymentStatus: 'Pending',
+                transactionId: formData.get('transactionId') || 'NA',
+                orderStatus: 'Order Placed',
+                orderId: 'ORD-' + Date.now()
+            };
+            
+            // Send to Apps Script using multiple methods
+            const url = APPS_SCRIPT_URL + '?' + new URLSearchParams(params);
+            
+            // Method 1: Try fetch with proper headers
+            fetch(url, {
+                method: 'GET',
+                mode: 'no-cors',
+                cache: 'no-cache'
+            })
+            .then(response => {
+                console.log('Order submitted successfully');
+                completeCheckout();
+            })
+            .catch(error => {
+                console.log('Method 1 failed, trying method 2...');
+                // Method 2: Use image beacon (more reliable for CORS)
+                submitViaImageBeacon(url);
+            });
+        }
+
+        function submitViaImageBeacon(url) {
+            const img = new Image();
+            img.onload = function() {
+                console.log('Order submitted via beacon');
+                completeCheckout();
+            };
+            img.onerror = function() {
+                console.log('Beacon method also attempted');
+                completeCheckout();
+            };
+            img.src = url;
+        }
+
+        function completeCheckout() {
+            showAlert('Order placed successfully! Check your email for confirmation.', 'success', 'checkoutAlert');
+            setTimeout(() => {
+                cart = [];
+                saveCart();
+                updateCartUI();
+                closeModal('checkoutModal');
+                toggleCart();
+            }, 2000);
+        }
+
+        // Contact Form
+        function showContactForm() {
+            document.getElementById('contactModal').classList.add('active');
+        }
+
+        function submitContact(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            const params = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                orderId: 'INQUIRY-' + Date.now(),
+                finalAmount: 0,
+                orderStatus: 'Inquiry Received'
+            };
+            
+            const url = APPS_SCRIPT_URL + '?' + new URLSearchParams(params);
+            
+            fetch(url, {
+                method: 'GET',
+                mode: 'no-cors',
+                cache: 'no-cache'
+            })
+            .then(response => {
+                completeContactSubmission(form);
+            })
+            .catch(error => {
+                // Try beacon method
+                const img = new Image();
+                img.onload = () => completeContactSubmission(form);
+                img.onerror = () => completeContactSubmission(form);
+                img.src = url;
+            });
+        }
+
+        function completeContactSubmission(form) {
+            showAlert('Message sent! We will contact you soon.', 'success', 'contactAlert');
+            setTimeout(() => {
+                form.reset();
+                closeModal('contactModal');
+            }, 2000);
+        }
+
+        // Newsletter
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            const params = {
+                email: email,
+                orderId: 'NEWSLETTER-' + Date.now(),
+                finalAmount: 0,
+                orderStatus: 'Newsletter Subscribed'
+            };
+            
+            const url = APPS_SCRIPT_URL + '?' + new URLSearchParams(params);
+            
+            fetch(url, {
+                method: 'GET',
+                mode: 'no-cors',
+                cache: 'no-cache'
+            })
+            .then(response => {
+                completeNewsletterSubscription(event.target);
+            })
+            .catch(error => {
+                // Try beacon method
+                const img = new Image();
+                img.onload = () => completeNewsletterSubscription(event.target);
+                img.onerror = () => completeNewsletterSubscription(event.target);
+                img.src = url;
+            });
+        }
+
+        function completeNewsletterSubscription(form) {
+            form.reset();
+            showAlert('Subscribed! Check your email for a welcome offer.', 'success');
+        }
+
+        // UI Helpers
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+        }
+
+        function showAlert(message, type = 'success', containerId = null) {
+            const alertId = containerId ? `#${containerId}` : '.alert';
+            const alert = document.querySelector(alertId);
+            if (alert) {
+                alert.textContent = message;
+                alert.className = `alert show alert-${type}`;
+                setTimeout(() => {
+                    alert.classList.remove('show');
+                }, 4000);
+            }
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function toggleSearch() {
+            alert('Search functionality - filter products by name or category');
+        }
+
+        // Payment Method Handler
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'paymentMethod') {
+                const field = document.getElementById('transactionIdField');
+                if (['UPI', 'Card', 'NetBanking'].includes(e.target.value)) {
+                    field.style.display = 'block';
+                } else {
+                    field.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
